@@ -59,14 +59,16 @@ export function Section({
   children,
   titleClassname,
   profiles,
+  containerClassname,
 }: {
   title: string;
   children: React.ReactNode;
   titleClassname?: string;
+  containerClassname?: string;
   profiles?: IProfiles[];
 }) {
   return (
-    <SectionHolder>
+    <SectionHolder className={`my-2 ${containerClassname}`}>
       <div className="header flex justify-center items-center gap-1 max-w-[60%]" title={title}>
         <span
           className={`${

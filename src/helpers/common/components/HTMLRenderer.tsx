@@ -17,5 +17,9 @@ export const HTMLRenderer = ({ htmlString }: { htmlString: string }) => {
       },
     });
   }, [htmlString]);
-  return <div className={`${styles.richtextRuntimeWrapper} text-xs`}>{parsedElement}</div>;
+  return (
+    <div className={`${styles.richtextRuntimeWrapper} text-xs antialiased font-sans`}>
+      {parsedElement}
+    </div>
+  );
 };
